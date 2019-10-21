@@ -103,6 +103,7 @@ const App = (props) => {
         <div className="catalog__movies-list">
           {data.map((filmData) => <FilmCard key={filmData.id} data={filmData}/>)}
         </div>
+        
         <div className="catalog__more">
           <button className="catalog__button" type="button">Show more</button>
         </div>
