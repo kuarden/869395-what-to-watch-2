@@ -4,7 +4,7 @@ import FilmCard from './filmCard.jsx';
 
 const App = (props) => {
 
-  const {filmsList} = props;
+  const {films} = props;
 
   return <Fragment>
     <section className="movie-card">
@@ -101,8 +101,9 @@ const App = (props) => {
         </ul>
 
         <div className="catalog__movies-list">
-          {filmsList.map((filmCard) => <FilmCard key={filmCard.id} data={filmCard}/>)}
+          {films.map((film) => <FilmCard key={film.id} film={film}/>)}
         </div>
+
         <div className="catalog__more">
           <button className="catalog__button" type="button">Show more</button>
         </div>
@@ -126,7 +127,7 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  filmsList: PropTypes.arrayOf(PropTypes.shape({
+  films: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,

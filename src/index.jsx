@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app/app.jsx";
-import {data} from "./data";
+import {films} from "./data";
 
 const init = () => {
-  ReactDOM.render(<App filmsList={data}/>, document.querySelector(`#root`));
+
+  // console.log(films)
+
+  ReactDOM.render(<App films={films}/>, document.querySelector(`#root`));
 };
 
 init();
