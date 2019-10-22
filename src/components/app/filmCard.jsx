@@ -18,7 +18,11 @@ const FilmCard = (props) => {
 };
 
 FilmCard.propTypes = {
-  data: PropTypes.object.isRequired
+  filmCard: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+  }),
 };
 
 export default FilmCard;
