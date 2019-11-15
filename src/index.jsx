@@ -4,9 +4,6 @@ import App from "./components/app/app.jsx";
 import {films} from "./data";
 
 const init = () => {
-
-  // console.log(films)
-
   ReactDOM.render(<App films={films}/>, document.querySelector(`#root`));
 };
 

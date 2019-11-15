@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {PropTypes} from 'prop-types';
-import FilmCard from './filmCard.jsx';
+import FilmCard from '../film-card/filmCard.jsx';
 
 const App = (props) => {
 
