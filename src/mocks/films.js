@@ -1,4 +1,4 @@
-export const films = [
+export const FILMS = [
   {id: 1, name: `Fantastic Beasts: The Crimes of Grindelwald`, image: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`},
   {id: 2, name: `Bohemian Rhapsody`, image: `img/bohemian-rhapsody.jpg`},
   {id: 3, name: `Macbeth`, image: `img/macbeth.jpg`},

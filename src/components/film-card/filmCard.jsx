@@ -3,10 +3,10 @@ import {PropTypes} from 'prop-types';
 
 const FilmCard = (props) => {
 
-  const {film, handleClick} = props;
+  const {film, handleClick, handleMouseOver} = props;
 
   return <Fragment>
-    <article className="small-movie-card catalog__movies-card">
+    <article className="small-movie-card catalog__movies-card" onMouseOver={() => handleMouseOver(film)}>
       <div className="small-movie-card__image">
         <img src={film.image} alt={film.name} width="280" height="175"/>
       </div>
@@ -24,6 +24,7 @@ FilmCard.propTypes = {
     image: PropTypes.string.isRequired,
   }),
   handleClick: PropTypes.func,
+  handleMouseOver: PropTypes.func,
 };
 
 export default FilmCard;
