@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {PropTypes} from 'prop-types';
-import FilmList from '../film-list/filmList.jsx';
+import FilmList from '../film-list/film-list.jsx';
 
 const App = (props) => {
 

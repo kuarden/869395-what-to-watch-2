@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import FilmList from './filmList.jsx';
+import FilmList from './film-list.jsx';
 
 export const films = [
   {id: 1, name: `Fantastic Beasts: The Crimes of Grindelwald`, image: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`},
