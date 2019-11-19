@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {PropTypes} from 'prop-types';
-import FilmList from '../film-list/filmList.jsx';
+import FilmList from '../film-list/film-list.jsx';
 
 const App = (props) => {
 
@@ -126,9 +126,10 @@ const App = (props) => {
 
 App.propTypes = {
   films: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    ID: PropTypes.number.isRequired,
+    NAME: PropTypes.string.isRequired,
+    IMAGE: PropTypes.string.isRequired,
+    URL: PropTypes.string.isRequired,
   })).isRequired,
 };
 

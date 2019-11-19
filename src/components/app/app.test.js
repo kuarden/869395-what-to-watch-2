@@ -2,33 +2,133 @@ import React from "react";
 import renderer from "react-test-renderer";
 import App from "./app.jsx";
 
-export const films = [
-  {id: 1, name: `Fantastic Beasts: The Crimes of Grindelwald`, image: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`},
-  {id: 2, name: `Bohemian Rhapsody`, image: `img/bohemian-rhapsody.jpg`},
-  {id: 3, name: `Macbeth`, image: `img/macbeth.jpg`},
-  {id: 4, name: `Aviator`, image: `img/aviator.jpg`},
-  {id: 5, name: `We need to talk about Kevin`, image: `img/we-need-to-talk-about-kevin.jpg`},
-  {id: 6, name: `What We Do in the Shadows`, image: `img/what-we-do-in-the-shadows.jpg`},
-  {id: 7, name: `Revenant`, image: `img/revenant.jpg`},
-  {id: 8, name: `Jonny English`, image: `img/johnny-english.jpg`},
-  {id: 9, name: `Shutter Island`, image: `img/shutter-island.jpg`},
-  {id: 10, name: `Pulp Fiction`, image: `img/pulp-fiction.jpg`},
-  {id: 11, name: `No Country for Old Men`, image: `img/no-country-for-old-men.jpg`},
-  {id: 12, name: `Snatch`, image: `img/snatch.jpg`},
-  {id: 13, name: `Moonrise Kingdom`, image: `img/moonrise-kingdom.jpg`},
-  {id: 14, name: `Seven Years in Tibet`, image: `img/seven-years-in-tibet.jpg`},
-  {id: 15, name: `Midnigth Special`, image: `img/midnight-special.jpg`},
-  {id: 16, name: `War of the Worlds`, image: `img/war-of-the-worlds.jpg`},
-  {id: 17, name: `Dardjeeling Limited`, image: `img/dardjeeling-limited.jpg`},
-  {id: 18, name: `Orlando`, image: `img/orlando.jpg`},
-  {id: 19, name: `Mindhunter`, image: `img/mindhunter.jpg`},
-  {id: 20, name: `Midnight Special`, image: `img/midnight-special.jpg`},
+export const FILMS = [
+  {
+    ID: 1,
+    NAME: `Fantastic Beasts: The Crimes of Grindelwald`,
+    IMAGE: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
+    URL: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  },
+  {
+    ID: 2,
+    NAME: `Bohemian Rhapsody`,
+    IMAGE: `img/bohemian-rhapsody.jpg`,
+    URL: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
+  {
+    ID: 3,
+    NAME: `Macbeth`,
+    IMAGE: `img/macbeth.jpg`,
+    URL: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  },
+  {
+    ID: 4,
+    NAME: `Aviator`,
+    IMAGE: `img/aviator.jpg`,
+    URL: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
+  {
+    ID: 5,
+    NAME: `We need to talk about Kevin`,
+    IMAGE: `img/we-need-to-talk-about-kevin.jpg`,
+    URL: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  },
+  {
+    ID: 6,
+    NAME: `What We Do in the Shadows`,
+    IMAGE: `img/what-we-do-in-the-shadows.jpg`,
+    URL: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
+  {
+    ID: 7,
+    NAME: `Revenant`,
+    IMAGE: `img/revenant.jpg`,
+    URL: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  },
+  {
+    ID: 8,
+    NAME: `Jonny English`,
+    IMAGE: `img/johnny-english.jpg`,
+    URL: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
+  {
+    ID: 9,
+    NAME: `Shutter Island`,
+    IMAGE: `img/shutter-island.jpg`,
+    URL: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  },
+  {
+    ID: 10,
+    NAME: `Pulp Fiction`,
+    IMAGE: `img/pulp-fiction.jpg`,
+    URL: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
+  {
+    ID: 11,
+    NAME: `No Country for Old Men`,
+    IMAGE: `img/no-country-for-old-men.jpg`,
+    URL: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  },
+  {
+    ID: 12,
+    NAME: `Snatch`,
+    IMAGE: `img/snatch.jpg`,
+    URL: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
+  {
+    ID: 13,
+    NAME: `Moonrise Kingdom`,
+    IMAGE: `img/moonrise-kingdom.jpg`,
+    URL: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  },
+  {
+    ID: 14,
+    NAME: `Seven Years in Tibet`,
+    IMAGE: `img/seven-years-in-tibet.jpg`,
+    URL: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
+  {
+    ID: 15,
+    NAME: `Midnigth Special`,
+    IMAGE: `img/midnight-special.jpg`,
+    URL: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  },
+  {
+    ID: 16,
+    NAME: `War of the Worlds`,
+    IMAGE: `img/war-of-the-worlds.jpg`,
+    URL: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
+  {
+    ID: 17,
+    NAME: `Dardjeeling Limited`,
+    IMAGE: `img/dardjeeling-limited.jpg`,
+    URL: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  },
+  {
+    ID: 18,
+    NAME: `Orlando`,
+    IMAGE: `img/orlando.jpg`,
+    URL: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
+  {
+    ID: 19,
+    NAME: `Mindhunter`,
+    IMAGE: `img/mindhunter.jpg`,
+    URL: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
+  },
+  {
+    ID: 20,
+    NAME: `Midnight Special`,
+    IMAGE: `img/midnight-special.jpg`,
+    URL: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
+  },
 ];
 
 it(`App renders correctly`, () => {
   const tree = renderer.create(
       <App
-        films={films}
+        films={FILMS}
       />
   ).toJSON();
 

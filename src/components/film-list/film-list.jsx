@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import FilmCard from '../film-card/filmCard.jsx';
+import FilmCard from '../film-card/film-card.jsx';
 import PropTypes from "prop-types";
 
 export default class FilmList extends PureComponent {
@@ -21,7 +21,7 @@ export default class FilmList extends PureComponent {
     const {films} = this.props;
     return (
       <div className="catalog__movies-list">
-        {films.map((film, n) => <FilmCard film={film} handleMouseOver={this.handleMouseOver} key={`${film} ${n}`} />)}
+        {films.map((film, n) => <FilmCard film={film} handleMouseOver={this.handleMouseOver} key={`${film.ID} ${n}`} />)}
       </div>
     );
   }
