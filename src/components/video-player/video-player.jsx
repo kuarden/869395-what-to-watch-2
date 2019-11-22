@@ -7,23 +7,31 @@ export default class VideoPlayer extends React.PureComponent {
 
     this.videoPlayerRef = React.createRef();
 
+    this.playTimeout = null;
+
     this.state = {
       isMuted: true,
       isPlaying: this.props.isPlaying
     };
   }
 
+  componentWillUnmount() {
+    clearTimeout(this.playTimeout);
+  }
+
   componentDidUpdate() {
     const video = this.videoPlayerRef.current;
-
-    if (this.props.isPlaying) {
-      video.src = this.props.src;
-      setTimeout(() => {
-        video.play();
-      }, 1000);
-    } else {
-      video.load();
-      video.src = ``;
+    if (video) {
+      if (this.props.isPlaying) {
+        video.src = this.props.src;
+        this.playTimeout = setTimeout(() => {
+          video.play();
+        }, 1000);
+      } else {
+        clearTimeout(this.playTimeout);
+        video.load();
+        video.src = ``;
+      }
     }
   }
 

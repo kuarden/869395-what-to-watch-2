@@ -31,10 +31,10 @@ export class FilmCard extends React.PureComponent {
     return <Fragment>
       <article className="small-movie-card catalog__movies-card" onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave}>
         <div className="small-movie-card__image">
-          <VideoPlayer src={film.URL} poster={film.IMAGE} isPlaying={this.state.isPlaying} />
+          <VideoPlayer src={film.url} poster={film.image} isPlaying={this.state.isPlaying} />
         </div>
         <h3 className="small-movie-card__title" onClick={handleClick}>
-          <a className="small-movie-card__link" href="movie-page.html">{film.NAME}</a>
+          <a className="small-movie-card__link" href="movie-page.html">{film.name}</a>
         </h3>
       </article>
     </Fragment>;
@@ -43,10 +43,10 @@ export class FilmCard extends React.PureComponent {
 
 FilmCard.propTypes = {
   film: PropTypes.shape({
-    ID: PropTypes.number.isRequired,
-    NAME: PropTypes.string.isRequired,
-    IMAGE: PropTypes.string.isRequired,
-    URL: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
   }),
   handleClick: PropTypes.func,
 };
