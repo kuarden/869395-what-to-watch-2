@@ -1,16 +1,16 @@
 import React from "react";
-import renderer from "react-test-renderer";
-import {createStore} from 'redux';
-import {Provider} from 'react-redux';
-import {reducer} from "../../reducer/reducer.js";
-import App from "./app.jsx";
+import Enzyme, {shallow} from "enzyme";
+import toJson from "enzyme-to-json";
+import Adapter from "enzyme-adapter-react-16";
+import {App} from "./app.jsx";
+import {films} from "../../mocks/films.js";
+
+Enzyme.configure({adapter: new Adapter()});
 
 it(`App renders correctly`, () => {
-  const store = createStore(reducer);
-  const tree = renderer
-    .create(<Provider store={store}><App
-      films={[]}
-    /></Provider>).toJSON();
+  const tree = shallow(<App
+    films={films}
+  />);
 
-  expect(tree).toMatchSnapshot();
+  expect(toJson(tree)).toMatchSnapshot();
 });

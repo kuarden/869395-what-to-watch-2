@@ -4,16 +4,40 @@ exports[`GenresList renders correctly 1`] = `
 <ul
   className="catalog__genres-list"
 >
-  <li
-    className="catalog__genres-item catalog__genres-item--active"
-  >
-    <a
-      className="catalog__genres-link"
-      href="#"
-      onClick={[Function]}
-    >
-      All genres
-    </a>
-  </li>
+  <Connect(GenreItem)
+    activeTab={false}
+    key="All genres"
+    name="All genres"
+  />
+  <Connect(GenreItem)
+    activeTab={false}
+    key="Fantasy"
+    name="Fantasy"
+  />
+  <Connect(GenreItem)
+    activeTab={false}
+    key="Drama"
+    name="Drama"
+  />
+  <Connect(GenreItem)
+    activeTab={false}
+    key="Adventures"
+    name="Adventures"
+  />
+  <Connect(GenreItem)
+    activeTab={false}
+    key="Comedy"
+    name="Comedy"
+  />
+  <Connect(GenreItem)
+    activeTab={false}
+    key="Thriller"
+    name="Thriller"
+  />
+  <Connect(GenreItem)
+    activeTab={false}
+    key="Action"
+    name="Action"
+  />
 </ul>
 `;

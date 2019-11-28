@@ -46,6 +46,7 @@ FilmCard.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
   }),
   handleClick: PropTypes.func,

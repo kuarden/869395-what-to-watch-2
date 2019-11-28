@@ -2,13 +2,7 @@ import React from 'react';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import FilmCard from './film-card.jsx';
-
-const film = {
-  id: 1,
-  name: `Fantastic Beasts: The Crimes of Grindelwald`,
-  image: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-  url: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
-};
+import {films} from "../../mocks/films.js";
 
 Enzyme.configure({adapter: new Adapter()});
 
@@ -18,7 +12,7 @@ describe(`<FilmCard />`, () => {
     const clickHandler = jest.fn();
 
     const filmCard = shallow(<FilmCard
-      film={film}
+      film={films[0]}
       handleClick={clickHandler}
     />);
 
@@ -30,7 +24,7 @@ describe(`<FilmCard />`, () => {
 
   it(`The cursor is on the map of the film works correctly`, () => {
     const filmCard = shallow(<FilmCard
-      film={film}
+      film={films[0]}
     />);
 
     filmCard.find(`.small-movie-card`).simulate(`mouseover`);
@@ -39,7 +33,7 @@ describe(`<FilmCard />`, () => {
 
   it(`The cursor is on the map of the film works correctly`, () => {
     const filmCard = shallow(<FilmCard
-      film={film}
+      film={films[0]}
     />);
 
     filmCard.find(`.small-movie-card`).simulate(`mouseleave`);

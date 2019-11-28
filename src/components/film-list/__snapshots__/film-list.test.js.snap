@@ -4,525 +4,265 @@ exports[`FilmList renders correctly 1`] = `
 <div
   className="catalog__movies-list"
 >
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Fantastic Beasts: The Crimes of Grindelwald
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/bohemian-rhapsody.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Bohemian Rhapsody
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/macbeth.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Macbeth
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/aviator.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Aviator
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/we-need-to-talk-about-kevin.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        We need to talk about Kevin
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/what-we-do-in-the-shadows.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        What We Do in the Shadows
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/revenant.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Revenant
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/johnny-english.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Johnny English
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/shutter-island.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Shutter Island
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/pulp-fiction.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Pulp Fiction
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/no-country-for-old-men.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        No Country for Old Men
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/snatch.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Snatch
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/moonrise-kingdom.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Moonrise Kingdom
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/seven-years-in-tibet.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Seven Years in Tibet
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/midnight-special.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Midnigth Special
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/war-of-the-worlds.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        War of the Worlds
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/dardjeeling-limited.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Dardjeeling Limited
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/orlando.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Orlando
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/mindhunter.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Mindhunter
-      </a>
-    </h3>
-  </article>
-  <article
-    className="small-movie-card catalog__movies-card"
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-  >
-    <div
-      className="small-movie-card__image"
-    >
-      <video
-        height="175"
-        muted={true}
-        poster="img/midnight-special.jpg"
-        width="280"
-      />
-    </div>
-    <h3
-      className="small-movie-card__title"
-    >
-      <a
-        className="small-movie-card__link"
-        href="movie-page.html"
-      >
-        Midnight Special
-      </a>
-    </h3>
-  </article>
+  <FilmCard
+    film={
+      Object {
+        "genre": "Fantasy",
+        "id": 1,
+        "image": "img/fantastic-beasts-the-crimes-of-grindelwald.jpg",
+        "name": "Fantastic Beasts: The Crimes of Grindelwald",
+        "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="1 0"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Drama",
+        "id": 2,
+        "image": "img/bohemian-rhapsody.jpg",
+        "name": "Bohemian Rhapsody",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="2 1"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Fantasy",
+        "id": 3,
+        "image": "img/macbeth.jpg",
+        "name": "Macbeth",
+        "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="3 2"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Adventures",
+        "id": 4,
+        "image": "img/aviator.jpg",
+        "name": "Aviator",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="4 3"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Adventures",
+        "id": 5,
+        "image": "img/we-need-to-talk-about-kevin.jpg",
+        "name": "We need to talk about Kevin",
+        "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="5 4"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Fantasy",
+        "id": 6,
+        "image": "img/what-we-do-in-the-shadows.jpg",
+        "name": "What We Do in the Shadows",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="6 5"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Drama",
+        "id": 7,
+        "image": "img/revenant.jpg",
+        "name": "Revenant",
+        "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="7 6"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Comedy",
+        "id": 8,
+        "image": "img/johnny-english.jpg",
+        "name": "Johnny English",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="8 7"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Thriller",
+        "id": 9,
+        "image": "img/shutter-island.jpg",
+        "name": "Shutter Island",
+        "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="9 8"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Action",
+        "id": 10,
+        "image": "img/pulp-fiction.jpg",
+        "name": "Pulp Fiction",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="10 9"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Action",
+        "id": 11,
+        "image": "img/no-country-for-old-men.jpg",
+        "name": "No Country for Old Men",
+        "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="11 10"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Action",
+        "id": 12,
+        "image": "img/snatch.jpg",
+        "name": "Snatch",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="12 11"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Fantasy",
+        "id": 13,
+        "image": "img/moonrise-kingdom.jpg",
+        "name": "Moonrise Kingdom",
+        "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="13 12"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Adventures",
+        "id": 14,
+        "image": "img/seven-years-in-tibet.jpg",
+        "name": "Seven Years in Tibet",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="14 13"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Fantasy",
+        "id": 15,
+        "image": "img/midnight-special.jpg",
+        "name": "Midnigth Special",
+        "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="15 14"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Fantasy",
+        "id": 16,
+        "image": "img/war-of-the-worlds.jpg",
+        "name": "War of the Worlds",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="16 15"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Adventures",
+        "id": 17,
+        "image": "img/dardjeeling-limited.jpg",
+        "name": "Dardjeeling Limited",
+        "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="17 16"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Adventures",
+        "id": 18,
+        "image": "img/orlando.jpg",
+        "name": "Orlando",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="18 17"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Action",
+        "id": 19,
+        "image": "img/mindhunter.jpg",
+        "name": "Mindhunter",
+        "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="19 18"
+  />
+  <FilmCard
+    film={
+      Object {
+        "genre": "Fantasy",
+        "id": 20,
+        "image": "img/midnight-special.jpg",
+        "name": "Midnight Special",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
+      }
+    }
+    handleMouseOver={[Function]}
+    key="20 19"
+  />
 </div>
 `;

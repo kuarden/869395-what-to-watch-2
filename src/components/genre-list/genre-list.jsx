@@ -37,7 +37,7 @@ GenresList.propTypes = {
 };
 
 const mapStateToProps = (state, ownProps) => Object.assign({}, ownProps, {
-  genre: state.genre,
+  genre: state.genre
 });
 
 export default connect(mapStateToProps)(GenresList);

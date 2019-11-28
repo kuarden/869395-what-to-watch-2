@@ -16,7 +16,8 @@ export default class VideoPlayer extends React.PureComponent {
   }
 
   componentWillUnmount() {
-    clearTimeout(this.playTimeout);
+    if(typeof this.playTimeout !== `undefined`)
+      clearTimeout(this.playTimeout);
   }
 
   componentDidUpdate() {
@@ -28,9 +29,11 @@ export default class VideoPlayer extends React.PureComponent {
           video.play();
         }, 1000);
       } else {
-        clearTimeout(this.playTimeout);
-        video.load();
-        video.src = ``;
+        if(typeof this.playTimeout !== `undefined`){
+          clearTimeout(this.playTimeout);
+          video.load();
+          video.src = ``;
+        }
       }
     }
   }

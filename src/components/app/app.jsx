@@ -3,7 +3,7 @@ import {PropTypes} from 'prop-types';
 import FilmList from '../film-list/film-list.jsx';
 import GenreList from '../genre-list/genre-list.jsx';
 
-const App = (props) => {
+export const App = (props) => {
 
   const {films} = props;
 
@@ -103,8 +103,7 @@ App.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
+    genre: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
   })).isRequired,
 };
-
-export default App;
