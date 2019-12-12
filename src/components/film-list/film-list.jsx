@@ -1,39 +1,37 @@
-import React, {PureComponent} from 'react';
-import {connect} from "react-redux";
+import React, {PureComponent} from "react";
+import {arrayOf, func, shape, string, number} from 'prop-types';
 import FilmCard from '../film-card/film-card.jsx';
-import PropTypes from "prop-types";
+import withActiveItem from "../../hocs/with-active-item";
 
 export class FilmList extends PureComponent {
   constructor(props) {
     super(props);
-    this.handleMouseOver = this.handleMouseOver.bind(this);
-    this.state = {
-      activeFilmCard: null
-    };
-  }
-
-  handleMouseOver(film) {
-    this.setState({
-      activeFilmCard: film,
-    });
   }
 
   render() {
-    const {films} = this.props;
-    return (
-      <div className="catalog__movies-list">
-        {films.map((film, n) => <FilmCard film={film} handleMouseOver={this.handleMouseOver} key={`${film.id} ${n}`} />)}
-      </div>
-    );
+    const {films, onHeaderClick, onChangeActiveItem = () => ({})} = this.props;
+    return <div className="catalog__movies-list">{films.map((film, i) =>
+      <FilmCard key = {`movie-${film.id}`}
+        film = {film}
+        onHeaderClick = {onHeaderClick}
+        onMouseEnter= {() => onChangeActiveItem(i)}
+        onMouseLeave = {() => onChangeActiveItem(-1)}>
+      </FilmCard>
+    )}</div>;
   }
 }
 
 FilmList.propTypes = {
-  films: PropTypes.arrayOf(PropTypes.object).isRequired,
+  films: arrayOf(shape({
+    id: number,
+    name: string,
+    genre: string,
+    image: string,
+    url: string,
+  })).isRequired,
+  onHeaderClick: func.isRequired,
+  activeItem: number,
+  onChangeActiveItem: func,
 };
 
-const mapStateToProps = (state, ownProps) => Object.assign({}, ownProps, {
-  films: state.films
-});
-
-export default connect(mapStateToProps)(FilmList);
+export default withActiveItem(FilmList);

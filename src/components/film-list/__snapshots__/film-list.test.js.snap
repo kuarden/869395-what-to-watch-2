@@ -14,8 +14,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
       }
     }
-    handleMouseOver={[Function]}
-    key="1 0"
+    key="movie-1"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -27,8 +29,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
       }
     }
-    handleMouseOver={[Function]}
-    key="2 1"
+    key="movie-2"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -40,8 +44,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
       }
     }
-    handleMouseOver={[Function]}
-    key="3 2"
+    key="movie-3"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -53,8 +59,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
       }
     }
-    handleMouseOver={[Function]}
-    key="4 3"
+    key="movie-4"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -66,8 +74,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
       }
     }
-    handleMouseOver={[Function]}
-    key="5 4"
+    key="movie-5"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -79,8 +89,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
       }
     }
-    handleMouseOver={[Function]}
-    key="6 5"
+    key="movie-6"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -92,8 +104,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
       }
     }
-    handleMouseOver={[Function]}
-    key="7 6"
+    key="movie-7"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -105,8 +119,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
       }
     }
-    handleMouseOver={[Function]}
-    key="8 7"
+    key="movie-8"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -118,8 +134,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
       }
     }
-    handleMouseOver={[Function]}
-    key="9 8"
+    key="movie-9"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -131,8 +149,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
       }
     }
-    handleMouseOver={[Function]}
-    key="10 9"
+    key="movie-10"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -144,8 +164,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
       }
     }
-    handleMouseOver={[Function]}
-    key="11 10"
+    key="movie-11"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -157,8 +179,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
       }
     }
-    handleMouseOver={[Function]}
-    key="12 11"
+    key="movie-12"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -170,8 +194,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
       }
     }
-    handleMouseOver={[Function]}
-    key="13 12"
+    key="movie-13"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -183,8 +209,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
       }
     }
-    handleMouseOver={[Function]}
-    key="14 13"
+    key="movie-14"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -196,8 +224,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
       }
     }
-    handleMouseOver={[Function]}
-    key="15 14"
+    key="movie-15"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -209,8 +239,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
       }
     }
-    handleMouseOver={[Function]}
-    key="16 15"
+    key="movie-16"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -222,8 +254,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
       }
     }
-    handleMouseOver={[Function]}
-    key="17 16"
+    key="movie-17"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -235,8 +269,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
       }
     }
-    handleMouseOver={[Function]}
-    key="18 17"
+    key="movie-18"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -248,8 +284,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4",
       }
     }
-    handleMouseOver={[Function]}
-    key="19 18"
+    key="movie-19"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
   <FilmCard
     film={
@@ -261,8 +299,10 @@ exports[`FilmList renders correctly 1`] = `
         "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm",
       }
     }
-    handleMouseOver={[Function]}
-    key="20 19"
+    key="movie-20"
+    onHeaderClick={[MockFunction]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
 </div>
 `;

@@ -10,6 +10,8 @@ Enzyme.configure({adapter: new Adapter()});
 it(`App renders correctly`, () => {
   const tree = shallow(<App
     films={films}
+    onChangeGenre = {jest.fn()}
+    onGetFilms = {jest.fn()}
   />);
 
   expect(toJson(tree)).toMatchSnapshot();

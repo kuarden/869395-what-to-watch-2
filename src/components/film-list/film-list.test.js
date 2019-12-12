@@ -10,6 +10,9 @@ Enzyme.configure({adapter: new Adapter()});
 it(`FilmList renders correctly`, () => {
   const tree = shallow(<FilmList
     films={films}
+    onHeaderClick = {jest.fn()}
+    onMouseEnter = {()=> jest.fn()}
+    onMouseLeave = {()=> jest.fn()}
   />);
 
   expect(toJson(tree)).toMatchSnapshot();

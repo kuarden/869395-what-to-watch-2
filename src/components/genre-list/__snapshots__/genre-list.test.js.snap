@@ -4,40 +4,49 @@ exports[`GenresList renders correctly 1`] = `
 <ul
   className="catalog__genres-list"
 >
-  <Connect(GenreItem)
-    activeTab={false}
-    key="All genres"
-    name="All genres"
-  />
-  <Connect(GenreItem)
-    activeTab={false}
-    key="Fantasy"
-    name="Fantasy"
-  />
-  <Connect(GenreItem)
-    activeTab={false}
-    key="Drama"
-    name="Drama"
-  />
-  <Connect(GenreItem)
-    activeTab={false}
-    key="Adventures"
-    name="Adventures"
-  />
-  <Connect(GenreItem)
-    activeTab={false}
-    key="Comedy"
-    name="Comedy"
-  />
-  <Connect(GenreItem)
-    activeTab={false}
-    key="Thriller"
-    name="Thriller"
-  />
-  <Connect(GenreItem)
-    activeTab={false}
-    key="Action"
-    name="Action"
-  />
+  <li
+    className="catalog__genres-item "
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__genres-link"
+      href="#"
+    >
+      Fantasy
+    </a>
+  </li>
+  <li
+    className="catalog__genres-item "
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__genres-link"
+      href="#"
+    >
+      Comedy
+    </a>
+  </li>
+  <li
+    className="catalog__genres-item "
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__genres-link"
+      href="#"
+    >
+      Drama
+    </a>
+  </li>
+  <li
+    className="catalog__genres-item "
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__genres-link"
+      href="#"
+    >
+      Adventures
+    </a>
+  </li>
 </ul>
 `;

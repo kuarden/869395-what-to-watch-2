@@ -1,33 +1,42 @@
-import {ActionCreator, reducer, initialState} from "./reducer";
+import {ActionCreator, reducer} from "./reducer";
 
 describe(`ActionCreator works correctly`, () => {
 
   it(`ActionCreator change genre`, () => {
     expect(ActionCreator.changeGenre(`Comedy`))
-            .toEqual({
-              type: `CHANGE_GENRE`,
-              payload: `Comedy`,
-            });
+      .toEqual({
+        type: `CHANGE_GENRE`,
+        payload: `Comedy`,
+      });
   });
 
   it(`ActionCreator get films`, () => {
-    expect(ActionCreator.getFilms(`Comedy`))
-            .toEqual({
-              type: `GET_FILMS`,
-              payload: [{
-                id: 8,
-                name: `Johnny English`,
-                image: `img/johnny-english.jpg`,
-                genre: `Comedy`,
-                url: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
-              }],
-            });
+    expect(ActionCreator.getFilms())
+      .toEqual({type: `GET_FILMS`});
   });
 });
 
-describe(`Reducers works correctly`, () => {
-  it(`Reducer without additional parameters return initial state`, () => {
-    expect(reducer(undefined, {}))
-        .toEqual(initialState);
-  });
+describe(`Reducer works correctly`, () => {
+
+  it(`Reducer return default`, () =>
+    expect(
+        reducer(undefined, {}))
+      .toEqual({})
+  );
+
+  it(`Reducer filters films`, () =>
+    expect(
+        reducer(
+            {genre: `Comedy`, allFilms: [{genre: `Comedy`}, {genre: `Drama`}], films: []},
+            {type: `GET_FILMS`})
+    ).toEqual({genre: `Comedy`, allFilms: [{genre: `Comedy`}, {genre: `Drama`}], films: [{genre: `Comedy`}]})
+  );
+
+  it(`Reducer changes genre`, () =>
+    expect(
+        reducer(
+            {genre: `All genres`, films: [{genre: `Comedy`}, {genre: `Drama`}]},
+            {type: `CHANGE_GENRE`, payload: `Comedy`})
+    ).toEqual({genre: `Comedy`, films: [{genre: `Comedy`}, {genre: `Drama`}]})
+  );
 });

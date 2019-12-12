@@ -1,43 +1,37 @@
-import React, {PureComponent} from 'react';
-import {connect} from "react-redux";
+import React, {PureComponent} from "react";
 import PropTypes from 'prop-types';
-import GenreItem from '../genre-item/genre-item.jsx';
+import withActiveItem from "../../hocs/with-active-item";
 
-export class GenresList extends PureComponent {
+class GenreList extends PureComponent {
   constructor(props) {
     super(props);
-    this.genres = [`All genres`];
-  }
-
-  getGenresList() {
-    const {films} = this.props;
-    const genres = new Set(films.map((n) => n.genre));
-    const genresArray = Array.from(genres);
-    this.genres = this.genres.concat(genresArray).slice(0, genresArray.length + 1);
   }
 
   render() {
-    const {genre} = this.props;
-    this.getGenresList();
-    return (
-      <ul className="catalog__genres-list">
-        {this.genres.map((n) => <GenreItem
-          key={n}
-          name={n}
-          activeTab={n === genre ? true : false}
-        />)}
-      </ul>
-    );
+    const {genres, onGenreClick, activeItem = -1, onChangeActiveItem = () => ({})} = this.props;
+
+    return <ul className="catalog__genres-list">
+      { genres.map((genre, i) =>
+        (<li className={`catalog__genres-item ${activeItem === i ? `catalog__genres-item--active` : ``}`}
+          key={`catalog__genres-item--${genre}-${i}`}
+          onClick={(event)=>{
+            event.preventDefault();
+            onChangeActiveItem(i);
+            onGenreClick(genre);
+          }}>
+          <a href="#" className="catalog__genres-link">
+            {genre}
+          </a>
+        </li>))}
+    </ul>;
   }
 }
 
-GenresList.propTypes = {
-  films: PropTypes.arrayOf(PropTypes.object).isRequired,
-  genre: PropTypes.string,
+GenreList.propTypes = {
+  genres: PropTypes.arrayOf(PropTypes.string),
+  onGenreClick: PropTypes.func.isRequired,
+  activeItem: PropTypes.number,
+  onChangeActiveItem: PropTypes.func,
 };
 
-const mapStateToProps = (state, ownProps) => Object.assign({}, ownProps, {
-  genre: state.genre
-});
-
-export default connect(mapStateToProps)(GenresList);
+export default withActiveItem(GenreList);
