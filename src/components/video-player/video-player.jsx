@@ -5,14 +5,12 @@ export default class VideoPlayer extends React.PureComponent {
   constructor(props) {
     super(props);
 
+    // console.log(props);
+
+
     this.videoPlayerRef = React.createRef();
-
     this.playTimeout = null;
-
-    this.state = {
-      isMuted: true,
-      isPlaying: this.props.isPlaying
-    };
+    this.state = {isPlaying: this.props.isPlaying};
   }
 
   componentWillUnmount() {
@@ -21,29 +19,36 @@ export default class VideoPlayer extends React.PureComponent {
     }
   }
 
-  componentDidUpdate() {
+  componentDidMount() {
+    const {src, muted} = this.props;
     const video = this.videoPlayerRef.current;
-    if (video) {
-      if (this.props.isPlaying) {
-        video.src = this.props.src;
-        this.playTimeout = setTimeout(() => {
-          video.play();
-        }, 1000);
-      } else {
-        if (typeof this.playTimeout !== `undefined`) {
-          clearTimeout(this.playTimeout);
-          video.load();
-          video.src = ``;
-        }
-      }
+    if (video === null) {
+      return;
+    }
+    video.src = src;
+    video.muted = muted;
+  }
+
+  componentDidUpdate() {
+    const {playerState} = this.props;
+    this.setState({isPlaying: playerState.isPlaying});
+    const video = this.videoPlayerRef.current;
+    if (video === null) {
+      return;
+    }
+    if (playerState.isPlaying) {
+      video.play();
+    } else {
+      video.pause();
+      video.currentTime = 0;
+      video.load();
     }
   }
 
   render() {
     const {poster} = this.props;
-    const {isMuted} = this.state;
     return (
-      <video ref={this.videoPlayerRef} poster={poster} muted={isMuted} width="280" height="175" />
+      <video ref={this.videoPlayerRef} poster={poster} width="280" height="175" />
     );
   }
 }
@@ -51,5 +56,9 @@ export default class VideoPlayer extends React.PureComponent {
 VideoPlayer.propTypes = {
   src: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
-  isPlaying: PropTypes.bool.isRequired,
+  playerState: PropTypes.exact({
+    isPlaying: PropTypes.bool
+  }).isRequired,
+  isPlaying: PropTypes.bool,
+  muted: PropTypes.bool,
 };

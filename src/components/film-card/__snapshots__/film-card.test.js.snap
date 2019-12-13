@@ -3,27 +3,27 @@
 exports[`FilmCard renders correctly 1`] = `
 <article
   className="small-movie-card catalog__movies-card"
-  onMouseLeave={[Function]}
-  onMouseOver={[Function]}
 >
   <div
     className="small-movie-card__image"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   >
     <video
       height="175"
-      muted={true}
-      poster="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+      poster="https://htmlacademy-react-2.appspot.com/wtw/static/film/preview/seven-years-in-tibet.jpg"
       width="280"
     />
   </div>
   <h3
     className="small-movie-card__title"
+    onClick={[Function]}
   >
     <a
       className="small-movie-card__link"
       href="movie-page.html"
     >
-      Fantastic Beasts: The Crimes of Grindelwald
+      Seven Years in Tibet
     </a>
   </h3>
 </article>

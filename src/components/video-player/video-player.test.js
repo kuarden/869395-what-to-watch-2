@@ -6,7 +6,7 @@ it(`VideoPlayer correctly renders after relaunch`, () => {
   const tree = renderer.create(<VideoPlayer
     src={``}
     poster={``}
-    isPlaying={true}
+    playerState={{}}
   />).toJSON();
 
   expect(tree).toMatchSnapshot();

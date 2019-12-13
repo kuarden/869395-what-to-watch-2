@@ -9,6 +9,9 @@ export default class Main extends PureComponent {
   }
 
   render() {
+
+    // console.log(this.props)
+
     const {films, genres, onChangeGenre} = this.props;
     return (
       <React.Fragment>

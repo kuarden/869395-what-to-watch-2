@@ -10,30 +10,43 @@ export class FilmCard extends React.PureComponent {
       isPlaying: false
     };
 
-    this.handleMouseOver = this.handleMouseOver.bind(this);
-    this.handleMouseLeave = this.handleMouseLeave.bind(this);
+    this.timerId = null;
+
+    this._handleMovieClick = this._handleMovieClick.bind(this);
+    this._handleMovieEnter = this._handleMovieEnter.bind(this);
+    this._handleMovieLeave = this._handleMovieLeave.bind(this);
   }
 
-  handleMouseOver() {
-    this.setState({
-      isPlaying: true
-    });
+  _handleMovieClick() {
+    const {film} = this.props;
+    location.href = `/film-overview-${film.id}`;
   }
 
-  handleMouseLeave() {
-    this.setState({
-      isPlaying: false
-    });
+  _handleMovieEnter() {
+    this.timerId = setTimeout(() => {
+      this.setState({isPlaying: true});
+    }, 1000);
+  }
+
+  _handleMovieLeave() {
+    if (this.timerId) {
+      clearTimeout(this.timerId);
+      this.setState({isPlaying: false});
+    }
   }
 
   render() {
-    const {film, handleClick} = this.props;
+    const {film, onMouseEnter, onMouseLeave} = this.props;
     return <Fragment>
       <article className="small-movie-card catalog__movies-card" onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave}>
-        <div className="small-movie-card__image">
-          <VideoPlayer src={film.url} poster={film.image} isPlaying={this.state.isPlaying} />
+        <div className="small-movie-card__image" onMouseEnter={() => {
+          onMouseEnter(); this._handleMovieEnter();
+        }} onMouseLeave={() => {
+          onMouseLeave(); this._handleMovieLeave();
+        }}>
+          <VideoPlayer src={film.videoLink} poster={film.previewImage} muted={true} playerState={this.state} />
         </div>
-        <h3 className="small-movie-card__title" onClick={handleClick}>
+        <h3 className="small-movie-card__title" onClick={() => this._handleMovieClick()}>
           <a className="small-movie-card__link" href="movie-page.html">{film.name}</a>
         </h3>
       </article>
@@ -45,11 +58,13 @@ FilmCard.propTypes = {
   film: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    previewImage: PropTypes.string.isRequired,
     genre: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
+    videoLink: PropTypes.string.isRequired,
   }),
-  handleClick: PropTypes.func,
+  onHeaderClick: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
 };
 
 export default FilmCard;
