@@ -1,7 +1,9 @@
 import React, {PureComponent} from "react";
 import PropTypes from 'prop-types';
+import {Link} from "react-router-dom";
 import FilmList from "../film-list/film-list.jsx";
 import GenreList from "../genre-list/genre-list.jsx";
+import {URL} from '../../const';
 
 export default class Main extends PureComponent {
   constructor(props) {
@@ -9,10 +11,8 @@ export default class Main extends PureComponent {
   }
 
   render() {
+    const {films, genres, onChangeGenre, auth} = this.props;
 
-    // console.log(this.props)
-
-    const {films, genres, onChangeGenre} = this.props;
     return (
       <React.Fragment>
         <section className="movie-card">
@@ -35,14 +35,14 @@ export default class Main extends PureComponent {
             </div>
 
             <div className="user-block">
-              <div className="user-block__avatar">
+              { auth ? <div className="user-block__avatar">
                 <img
-                  src="img/avatar.jpg"
-                  alt="User avatar"
+                  src={`${URL}/${auth.avatarUrl}`}
+                  alt={auth.name}
                   width="63"
                   height="63"
-                />
-              </div>
+                />              </div> :
+                <Link to="/login">Sign in</Link>}
             </div>
           </header>
 
@@ -68,6 +68,8 @@ export default class Main extends PureComponent {
                   <button
                     className="btn btn--play movie-card__button"
                     type="button"
+                    onClick = {()=>{
+                    }}
                   >
                     <svg viewBox="0 0 19 19" width="19" height="19">
                       <use xlinkHref="#play-s"></use>
@@ -77,6 +79,8 @@ export default class Main extends PureComponent {
                   <button
                     className="btn btn--list movie-card__button"
                     type="button"
+                    onClick = {()=>{
+                    }}
                   >
                     <svg viewBox="0 0 19 20" width="19" height="20">
                       <use xlinkHref="#add"></use>
@@ -123,4 +127,6 @@ export default class Main extends PureComponent {
 Main.propTypes = {
   genres: PropTypes.arrayOf(PropTypes.string),
   films: PropTypes.arrayOf(PropTypes.shape({name: PropTypes.string})).isRequired,
-  onChangeGenre: PropTypes.func.isRequired};
+  onChangeGenre: PropTypes.func.isRequired,
+  auth: PropTypes.shape({name: PropTypes.string, avatarUrl: PropTypes.string}).isRequired,
+};

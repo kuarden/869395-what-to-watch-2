@@ -11,8 +11,21 @@ export const apiDispatcher = {
   },
   checkAuthorization: () => (dispatch) => {
     return api.get(`/login`)
-      .then((response) => {
-        dispatch(ActionCreator.requireAuthorization(response.data));
+      .then(({data}) => {
+        dispatch(ActionCreator.requireAuthorization(!data));
+        if (data) {
+          dispatch(ActionCreator.auth(data));
+        }
+      })
+    .catch((err) => {
+      dispatch(ActionCreator.pushError(err.response));
+    });
+  },
+  signIn: (email, password) => (dispatch) => {
+    return api.post(`/login`, {email, password})
+      .then(({data}) => {
+        dispatch(ActionCreator.requireAuthorization(false));
+        dispatch(ActionCreator.auth(data));
       });
-  }
+  },
 };

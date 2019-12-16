@@ -1,9 +1,10 @@
 import axios from 'axios';
 import {ActionCreator} from './reducers/action-creator/action-creator';
+import {URL, TIME_OUT} from './const';
 
 export const api = axios.create({
-  baseURL: `https://htmlacademy-react-2.appspot.com/wtw`,
-  timeout: 5000,
+  baseURL: `${URL}/wtw`,
+  timeout: TIME_OUT,
   withCredentials: true,
 });
 

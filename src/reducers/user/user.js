@@ -1,8 +1,15 @@
 import {ActionType} from '../action-creator/action-creator';
 
-export const user = (state = {}, action) => {
+const initialState = {
+  isAuthorizationRequired: false,
+};
+
+export const user = (state = initialState, action) => {
   switch (action.type) {
     case ActionType.CHANGE_GENRE: return Object.assign({}, state, {genre: action.payload});
+    case ActionType.REQUIRE_AUTH: return Object.assign({}, state, {isAuthorizationRequired: action.payload});
+    case ActionType.SIGN_IN: return Object.assign({}, state, {signIn: action.payload});
+    case ActionType.AUTH: return Object.assign({}, state, {auth: action.payload});
   }
   return state;
 };
